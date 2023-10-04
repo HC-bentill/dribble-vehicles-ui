@@ -4,9 +4,7 @@ import {GetRandomUsers} from "@/http";
 import useSWR from "swr";
 import UserInformationCard from "../userInformationCard/UserInformationCard";
 
-type Props = {
-  allUsers: any;
-};
+type Props = {};
 
 const SidebarContent = (props: Props) => {
   const users = useSWR("getRandomUses", () => GetRandomUsers(), {

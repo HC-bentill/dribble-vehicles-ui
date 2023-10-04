@@ -9,6 +9,9 @@ import MessageIcon from "@/assets/icons/MessageIcon";
 import React from "react";
 import SearchBar from "../reusable/searchBar/SearchBar";
 import SidebarContent from "../reusable/sidebarContent/SidebarContent";
+import SidebarBottom from "../reusable/sidebarContent/SidebarBottom";
+import AvatarIcon from "@/assets/icons/AvatarIcon";
+import Header from "./Header";
 
 type Props = {
   children: React.ReactNode;
@@ -28,14 +31,21 @@ const PageLayout = ({children}: Props) => {
           <MessageIcon />
           <PictureIcon />
           <BellIcon />
+          <div className="sidebar-bottom">
+            <AvatarIcon />
+          </div>
         </div>
         <div className="sidebar-menu">
           <SearchBar />
           <SidebarContent />
+          <SidebarBottom />
         </div>
       </div>
 
-      <div className="content">{children}</div>
+      <div className="content">
+        <Header />
+        {children}
+      </div>
     </div>
   );
 };

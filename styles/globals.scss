@@ -19,7 +19,7 @@ html {
     height: 100vh;
     overflow: hidden;
     display: flex;
-    flex: 0.35;
+    flex: 0.4;
     width: 100%;
 
     .sidebar-icons {
@@ -45,11 +45,18 @@ html {
         width: 40%;
         margin: 13px 0px;
       }
+
+      .sidebar-bottom {
+        position: absolute;
+        bottom: 15px;
+        cursor: pointer;
+      }
     }
 
     .sidebar-menu {
       background-color: #fff;
       flex: 0.8;
+      position: relative;
       border-right: 1px solid #dddada;
       .search-bar {
         display: flex;
@@ -70,8 +77,38 @@ html {
     }
   }
 
+  .sidebar-content-bottom {
+    bottom: 0px;
+    position: absolute;
+    cursor: pointer;
+    background-color: white;
+    width: 100%;
+    color: black;
+    padding: 14px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .add-button {
+      background-color: black;
+      color: white;
+      width: 85%;
+      border: none;
+      padding: 13px 0px;
+      border-radius: 4px;
+      font-size: 13px;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.836);
+      }
+    }
+  }
+
   .content {
     flex: 1;
+    padding: 20px 50px;
   }
 }
 
@@ -100,6 +137,13 @@ html {
   gap: 4px;
 }
 
+.user-image {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  background-size: contain;
+  position: relative;
+}
 
 .user-card {
   display: flex;
@@ -107,34 +151,18 @@ html {
   gap: 5px;
   border-radius: 4px;
   cursor: pointer;
-  .user-image {
-    height: 40px;
-    width: 40px;
+
+  .user-online {
+    background-color: #04ba13;
+    height: 8px;
+    width: 8px;
+    position: absolute;
     border-radius: 100%;
-    background-size: contain;
-    position: relative;
-    .user-online {
-      background-color: #04ba13;
-      height: 8px;
-      width: 8px;
-      position: absolute;
-      border-radius: 100%;
-      bottom: 3px;
-      right: 0px;
-      border: 1px white solid;
-    }
+    bottom: 3px;
+    right: 0px;
+    border: 1px white solid;
   }
-  .user-name {
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: capitalize;
-  }
-  .user-description {
-    font-size: 10px;
-    font-weight: 500;
-    color: gray;
-    text-transform: capitalize;
-  }
+
   .user-status {
     text-transform: uppercase;
     font-size: 8px;
@@ -149,24 +177,109 @@ html {
   background-color: whitesmoke;
 }
 
-.sidebar-content::-webkit-scrollbar{
+.sidebar-content::-webkit-scrollbar {
   display: none;
 }
 
-
 .custom-scrollbars::-webkit-scrollbar {
-	width: 2px;
-	height: 7px;
-	display: block;
+  width: 2px;
+  height: 7px;
+  display: block;
 }
 
 .custom-scrollbars::-webkit-scrollbar-track {
-	background-color: #e4e4e4;
-	border-radius: 100px;
+  background-color: #e4e4e4;
+  border-radius: 100px;
 }
 
 .custom-scrollbars::-webkit-scrollbar-thumb {
-	background-color: gray;
-	border-radius: 100px;
+  background-color: gray;
+  border-radius: 100px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+
+.vertical-seperator {
+  border-right: 0.5px lightgray solid;
+  height: 20px;
+  margin: 0px 10px;
+}
+
+.header-icons {
+  display: flex;
+  gap: 14px;
+  cursor: pointer;
+}
+
+.user-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.user-name {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.user-description {
+  font-size: 10px;
+  font-weight: 500;
+  color: gray;
+  text-transform: capitalize;
+}
+
+.van-details {
+  background-color: #f3f5f9;
+  border-radius: 7px;
+  padding: 40px 60px;
+}
+
+.details-container {
+  display: flex;
+}
+
+.details-text {
+  flex: 0.6;
+  padding-top: 20px;
+}
+
+.van-image {
+  height: 250px;
+  width: 100%;
+  background-size: contain;
+  position: relative;
+  flex: 1;
+  background-size: cover;
+}
+
+
+.details-value {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.details-title {
+  font-size: 10px;
+  color: gray;
+}
+
+.details-flex {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  /* Your CSS styles for big screens go here */
+  .van-image {
+    background-size: contain;
+  }
 }
 
