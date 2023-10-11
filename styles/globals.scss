@@ -205,14 +205,14 @@ html {
 }
 
 .vertical-seperator {
-  border-right: 0.5px lightgray solid;
+  border-right: 0.5px whitesmoke solid;
   height: 20px;
   margin: 0px 10px;
 }
 
 .header-icons {
   display: flex;
-  gap: 14px;
+  gap: 8px;
   cursor: pointer;
 }
 
@@ -237,7 +237,9 @@ html {
 .van-details {
   background-color: #f3f5f9;
   border-radius: 7px;
-  padding: 40px 60px;
+  padding: 15px;
+  padding-right: 37px;
+  padding-left: 40px;
 }
 
 .details-container {
@@ -245,8 +247,9 @@ html {
 }
 
 .details-text {
-  flex: 0.6;
+  flex: 0.3;
   padding-top: 20px;
+  justify-content: center;
 }
 
 .van-image {
@@ -254,10 +257,9 @@ html {
   width: 100%;
   background-size: contain;
   position: relative;
-  flex: 1;
+  flex: 0.8;
   background-size: cover;
 }
-
 
 .details-value {
   font-weight: bold;
@@ -274,6 +276,55 @@ html {
   display: flex;
   gap: 50px;
   margin-bottom: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.underline-dotted {
+  font-size: 12px;
+  border-bottom: 1px dotted black;
+}
+
+.plate {
+  border: 1px solid black;
+  padding: 7px 10px;
+  border-radius: 2px;
+}
+
+.driver-stats-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0px 5px;
+  .title {
+    font-weight: bold;
+    font-size: 13px;
+  }
+}
+
+.gray-border-right {
+  border-right: 1px whitesmoke solid;
+}
+
+.home-body {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.home-body-container{
+  padding: 0px 10px;
+}
+
+.home-body-vertical-container {
+  border-right: 2px whitesmoke solid;
+  height: 20px;
+  margin: 0px 10px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -282,4 +333,3 @@ html {
     background-size: contain;
   }
 }
-
